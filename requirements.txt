@@ -9,3 +9,5 @@ folium
 statsmodels
 geopy
 scikit-learn
+Flask
+joblib
