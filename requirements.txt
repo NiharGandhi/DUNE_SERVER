@@ -1,13 +1,4 @@
 numpy
-pandas
-matplotlib
-seaborn
-plotly
-scipy
-shap
-folium
-statsmodels
-geopy
 scikit-learn
 Flask
 joblib
