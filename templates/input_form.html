@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Property Input</title>
+</head>
+<body>
+    <h1>Enter Property Details</h1>
+
+    <!-- Display the data we got from ESP -->
+    <p><strong>District:</strong> {{ district }}</p>
+    <p><strong>City:</strong> {{ city }}</p>
+    <p><strong>Building Type:</strong> {{ building_type }}</p>
+
+    <form action="/predict" method="POST">
+        <!-- The request_id is hidden so the server knows which record to update -->
+        <input type="hidden" name="request_id" value="{{ request_id }}">
+
+        <label for="bedrooms">Number of Bedrooms:</label>
+        <input type="number" name="bedrooms" id="bedrooms" required>
+        <br><br>
+
+        <label for="bathrooms">Number of Bathrooms:</label>
+        <input type="number" name="bathrooms" id="bathrooms" required>
+        <br><br>
+
+        <label for="area">Area (sq ft):</label>
+        <input type="number" step="any" name="area" id="area" required>
+        <br><br>
+
+        <input type="submit" value="Predict Price">
+    </form>
+</body>
+</html>
